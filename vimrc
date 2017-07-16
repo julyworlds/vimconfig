@@ -38,7 +38,7 @@ Plugin 'vim-scripts/tlib'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'sophacles/vim-bundle-mako'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-markdown'
@@ -59,6 +59,7 @@ Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'morhetz/gruvbox'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -172,7 +173,7 @@ set nofoldenable
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme rdark
 catch
 endtry
 
@@ -184,6 +185,10 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
+    if has('gui_macvim')
+        let $SUDO_ASKPASS="/usr/local/bin/macvim-askpass"
+        let $DISPLAY=":0"
+    endif
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
