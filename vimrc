@@ -173,7 +173,7 @@ set nofoldenable
 syntax enable 
 
 try
-    colorscheme rdark
+    colorscheme neuromancer
 catch
 endtry
 
